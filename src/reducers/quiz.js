@@ -45,8 +45,7 @@ const questions = [
       "Biff Tannen",
       "George McFly"],
     correctAnswerIndex: 1
-  }
-
+  },
   {
     id: 5,
     questionText:
