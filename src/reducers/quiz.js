@@ -11,7 +11,7 @@ const questions = [
       "Rise of the Guardians",
       "Alice in Wonderland",
       "My Neighbor Totoro"],
-    correctAnswerIndex: 4
+    correctAnswerIndex: 3
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ const questions = [
       "Sin City: A Dame to Kill For",
       "Speed 2: Cruise Control",
       "Son of the Mask"],
-    correctAnswerIndex: 1
+    correctAnswerIndex: 0
   },
   {
     id: 3,
@@ -33,7 +33,7 @@ const questions = [
         "Milla Jovovich",
         "Milla Johnson",
         "Kim Demp"],
-    correctAnswerIndex: 2
+    correctAnswerIndex: 1
   },
   {
     id: 4,
@@ -44,7 +44,7 @@ const questions = [
         "Emmett &quot;Doc&quot; Brown",
         "Biff Tannen",
         "George McFly"],
-    correctAnswerIndex: 1
+    correctAnswerIndex: 0
   },
   {
     id: 5,
@@ -55,7 +55,7 @@ const questions = [
         "Jonah Hill",
         "Jesse Eisenberg",
         "Zach Galifianakis"],
-    correctAnswerIndex: 3
+    correctAnswerIndex: 2
   }
 ];
 
