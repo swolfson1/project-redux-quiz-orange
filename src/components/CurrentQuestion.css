@@ -1,0 +1,11 @@
+.container{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: aquamarine;
+}
+
+.question{
+  padding: 20px;
+  text-align: center;
+}

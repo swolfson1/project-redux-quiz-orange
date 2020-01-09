@@ -9,3 +9,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.container{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  
+}
+
+.header{
+  background-color: blue;
+  text-align: center;
+}
