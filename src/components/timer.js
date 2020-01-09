@@ -1,45 +1,18 @@
-import React, { useEffect, useState } from "react";
-import ReactDOM from "react-dom";
+import React, { useState } from 'react';
+import { useInterval } from './useInterval';
 
-function CountdownTimer() {
-  const calculateTimeLeft = () => {
-    const difference = +new Date("2021-01-01") - +new Date();
-    let timeLeft = {};
+export default function Timer() {
+  const [elapsedSeconds, setElapsedSeconds] = useState(0);
 
-    if (difference > 0) {
-      timeLeft = {
-        seconds: Math.floor((difference / 1000) % 40)
-      };
-    }
-
-    return timeLeft;
-  };
-
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
-
-  useEffect(() => {
-    setTimeout(() => {
-      setTimeLeft(calculateTimeLeft());
-    }, 1000);
-  });
-
-  const timerComponents = [];
-
-  Object.keys(timeLeft).forEach(interval => {
-    if (!timeLeft[interval]) {
-      return;
-    }
-
-    timerComponents.push(
-      <span>
-        {timeLeft[interval]} {interval}{" "}
-      </span>
-    );
-  });
+  useInterval(() => {
+    setElapsedSeconds(elapsedSeconds + 1);
+  }, 1000);
 
   return (
-    <div>
-      {timerComponents.length ? timerComponents : <span>Time's up!</span>}
+    <div className="App">
+      <h1>Elapsed: {elapsedSeconds}</h1>
+      {elapsedSeconds < 20 && <h1>Time left: {20 - elapsedSeconds}</h1>}
+      {elapsedSeconds > 20 && <h1>Time's up!!!</h1>}
     </div>
   );
 }
