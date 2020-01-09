@@ -1,0 +1,104 @@
+{
+  "response_code": 0,
+  "results": [
+    {
+      "category": "Entertainment: Film",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Which movie includes a giant bunny-like spirit who has magic powers including growing trees?",
+      "correct_answer": "My Neighbor Totoro",
+      "incorrect_answers": [
+        "Hop",
+        "Rise of the Guardians",
+        "Alice in Wonderland"
+      ]
+    },
+    {
+      "category": "Entertainment: Film",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "Which movie sequel had improved box office results compared to its original film?",
+      "correct_answer": "Toy Story 2",
+      "incorrect_answers": [
+        "Sin City: A Dame to Kill For",
+        "Speed 2: Cruise Control",
+        "Son of the Mask"
+      ]
+    },
+    {
+      "category": "Entertainment: Film",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Who plays Alice in the Resident Evil movies?",
+      "correct_answer": "Milla Jovovich",
+      "incorrect_answers": [
+        "Madison Derpe", 
+        "Milla Johnson", 
+        "Kim Demp"]
+    },
+    {
+      "category": "Entertainment: Film",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Who is the main protagonist in, the 1985 film, Back to the Future?",
+      "correct_answer": "Marty McFly",
+      "incorrect_answers": [
+        "Emmett &quot;Doc&quot; Brown",
+        "Biff Tannen",
+        "George McFly"
+      ]
+    },
+    {
+      "category": "Entertainment: Film",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "Who voices the main character Blu in the 2011 animated film &quot;Rio&quot;?",
+      "correct_answer": "Jesse Eisenberg",
+      "incorrect_answers": ["Michael Cera", "Jonah Hill", "Zach Galifianakis"]
+    },
+    {
+      "category": "Entertainment: Film",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "In the movie &quot;Spaceballs&quot;, what are the Spaceballs attempting to steal from Planet Druidia?",
+      "correct_answer": "Air",
+      "incorrect_answers": ["The Schwartz", "Princess Lonestar", "Meatballs"]
+    },
+    {
+      "category": "Entertainment: Film",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "What city did the monster attack in the film, &quot;Cloverfield&quot;?",
+      "correct_answer": "New York, New York",
+      "incorrect_answers": [
+        "Las Vegas, Nevada",
+        "Chicago, Illinois",
+        "Orlando, Florida"
+      ]
+    },
+    {
+      "category": "Entertainment: Film",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "The 2016 Disney animated film &#039;Moana&#039; is based on which culture?",
+      "correct_answer": "Polynesian",
+      "incorrect_answers": ["Native American", "Japanese", "Nordic"]
+    },
+    {
+      "category": "Entertainment: Film",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "What is the name of the supercomputer located in the control room in &quot;Jurassic Park&quot; (1993)?",
+      "correct_answer": "Thinking Machines CM-5",
+      "incorrect_answers": ["Cray X-MP", "Cray XK7", "IBM Blue Gene/Q"]
+    },
+    {
+      "category": "Entertainment: Film",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "Which town is the setting for the Disney movie The Love Bug (1968)?",
+      "correct_answer": "San Francisco",
+      "incorrect_answers": ["Los Angeles", "Sacramento", "San Jose"]
+    }
+  ]
+}
