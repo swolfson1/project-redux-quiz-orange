@@ -1,23 +1,75 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from "@reduxjs/toolkit";
 
 // Change these to your own questions!
 const questions = [
-  { id: 1, questionText: 'Who set the Olympic record for the 100m dash in 2012?', options: ['Usain Bolt', 'Justin Gatlin', 'Tyson Gay', 'Asafa Powell'], correctAnswerIndex: 0 },
-  { id: 2, questionText: 'When was Michael Phelps last named male World Swimmer of the Year?', options: ['2012', '2014', '2016', '2018'], correctAnswerIndex: 2 }
-]
+  {
+    id: 1,
+    questionText:
+      "Which movie includes a giant bunny-like spirit who has magic powers including growing trees?",
+    options: [
+      "Hop",
+      "Rise of the Guardians",
+      "Alice in Wonderland",
+      "My Neighbor Totoro"],
+    correctAnswerIndex: 4
+  },
+  {
+    id: 2,
+    questionText:
+      "Which movie sequel had improved box office results compared to its original film?",
+    options: [
+      "Toy Story 2",
+      "Sin City: A Dame to Kill For",
+      "Speed 2: Cruise Control",
+      "Son of the Mask"],
+    correctAnswerIndex: 1
+  }
+  {
+    id: 3,
+    questionText:
+      "Who plays Alice in the Resident Evil movies?",
+      options: [
+        "Madison Derpe",
+        "Milla Jovovich",
+        "Milla Johnson",
+        "Kim Demp"],
+    correctAnswerIndex: 2
+  }
+  {
+    id: 4,
+    questionText:
+      "Who is the main protagonist in, the 1985 film, Back to the Future?",
+      options: [
+        "Marty McFly",
+        "Emmett &quot;Doc&quot; Brown",
+        "Biff Tannen",
+        "George McFly"],
+    correctAnswerIndex: 1
+  }
+  {
+    id: 5,
+    questionText:
+      "Who voices the main character Blu in the 2011 animated film &quot;Rio&quot;?",
+      options: [
+        "Michael Cera",
+        "Jonah Hill",
+        "Jesse Eisenberg",
+        "Zach Galifianakis"],
+    correctAnswerIndex: 3
+  }
+];
 
 const initialState = {
   questions,
   answers: [],
   currentQuesionIndex: 0,
   quizOver: false
-}
+};
 
 export const quiz = createSlice({
-  name: 'quiz',
+  name: "quiz",
   initialState,
   reducers: {
-
     /**
      * Use this action when a user selects an answer to the question.
      * The answer will be stored in the `quiz.answers` state with the
@@ -34,15 +86,19 @@ export const quiz = createSlice({
      * and `answerIndex` keys. See the readme for more details.
      */
     submitAnswer: (state, action) => {
-      const { questionId, answerIndex } = action.payload
-      const question = state.questions.find((q) => q.id === questionId)
+      const { questionId, answerIndex } = action.payload;
+      const question = state.questions.find(q => q.id === questionId);
 
       if (!question) {
-        throw new Error('Could not find question! Check to make sure you are passing the question id correctly.')
+        throw new Error(
+          "Could not find question! Check to make sure you are passing the question id correctly."
+        );
       }
 
       if (question.options[answerIndex] === undefined) {
-        throw new Error(`You passed answerIndex ${answerIndex}, but it is not in the possible answers array!`)
+        throw new Error(
+          `You passed answerIndex ${answerIndex}, but it is not in the possible answers array!`
+        );
       }
 
       state.answers.push({
@@ -51,7 +107,7 @@ export const quiz = createSlice({
         question,
         answer: question.options[answerIndex],
         isCorrect: question.correctAnswerIndex === answerIndex
-      })
+      });
     },
 
     /**
@@ -61,11 +117,11 @@ export const quiz = createSlice({
      *
      * This action does not require a payload.
      */
-    goToNextQuestion: (state) => {
+    goToNextQuestion: state => {
       if (state.currentQuesionIndex + 1 === state.questions.length) {
-        state.quizOver = true
+        state.quizOver = true;
       } else {
-        state.currentQuesionIndex += 1
+        state.currentQuesionIndex += 1;
       }
     },
 
@@ -77,8 +133,7 @@ export const quiz = createSlice({
      * This action does not require a payload.
      */
     restart: () => {
-      return initialState
+      return initialState;
     }
-
   }
-})
+});
