@@ -23,7 +23,7 @@ const questions = [
       "Speed 2: Cruise Control",
       "Son of the Mask"],
     correctAnswerIndex: 1
-  }
+  },
   {
     id: 3,
     questionText:
@@ -34,7 +34,7 @@ const questions = [
         "Milla Johnson",
         "Kim Demp"],
     correctAnswerIndex: 2
-  }
+  },
   {
     id: 4,
     questionText:
@@ -45,7 +45,7 @@ const questions = [
         "Biff Tannen",
         "George McFly"],
     correctAnswerIndex: 1
-  }
+  },
   {
     id: 5,
     questionText:
