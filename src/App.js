@@ -17,9 +17,10 @@ export const App = () => {
   
   const [questions, setQuestions] = useState([])
 
-  /* API loader */
+  /* Questions will be fetched from https://opentdb.com/, but for development purposes we use a local JSON file. */
   useEffect(() => {
     console.log(exampleApi)
+    setQuestions(exampleApi.results)
   }, [])
   return (
     <Provider store={store}>
