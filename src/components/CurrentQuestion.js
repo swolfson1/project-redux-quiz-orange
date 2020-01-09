@@ -1,6 +1,8 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
+import { Answers } from './Answers'
 import './CurrentQuestion.css';
+
 
 export const CurrentQuestion = () => {
   const question = useSelector((state) => state.quiz.questions[state.quiz.currentQuesionIndex])
@@ -10,12 +12,15 @@ export const CurrentQuestion = () => {
   }
 
   return (
+
     <div className="container">
       <div className="question">
         <h1>Question:</h1>
         <h2>{question.questionText}</h2>
       </div>
+     <Answers/>
     </div>
+    
 
   )
 }

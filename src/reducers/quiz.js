@@ -7,55 +7,60 @@ const questions = [
     questionText:
       'Which movie includes a giant bunny-like spirit who has magic powers including growing trees?',
     options: [
-      'Hop',
-      'Rise of the Guardians',
-      'Alice in Wonderland',
-      'My Neighbor Totoro'],
-    correctAnswerIndex: 4
+
+      "Hop",
+      "Rise of the Guardians",
+      "Alice in Wonderland",
+      "My Neighbor Totoro"],
+    correctAnswerIndex: 3
   },
   {
     id: 2,
     questionText:
       'Which movie sequel had improved box office results compared to its original film?',
     options: [
-      'Toy Story 2',
-      'Sin City: A Dame to Kill For',
-      'Speed 2: Cruise Control',
-      'Son of the Mask'],
-    correctAnswerIndex: 1
+
+      "Toy Story 2",
+      "Sin City: A Dame to Kill For",
+      "Speed 2: Cruise Control",
+      "Son of the Mask"],
+    correctAnswerIndex: 0
+
   },
   {
     id: 3,
     questionText:
-      'Who plays Alice in the Resident Evil movies?',
-    options: [
-      'Madison Derpe',
-      'Milla Jovovich',
-      'Milla Johnson',
-      'Kim Demp'],
-    correctAnswerIndex: 2
+    
+      "Who plays Alice in the Resident Evil movies?",
+      options: [
+        "Madison Derpe",
+        "Milla Jovovich",
+        "Milla Johnson",
+        "Kim Demp"],
+    correctAnswerIndex: 1
   },
   {
     id: 4,
     questionText:
-      'Who is the main protagonist in, the 1985 film, Back to the Future?',
-    options: [
-      'Marty McFly',
-      'Emmett &quot;Doc&quot; Brown',
-      'Biff Tannen',
-      'George McFly'],
-    correctAnswerIndex: 1
-  },
+
+      "Who is the main protagonist in, the 1985 film, Back to the Future?",
+      options: [
+        "Marty McFly",
+        "Emmett &quot;Doc&quot; Brown",
+        "Biff Tannen",
+        "George McFly"],
+    correctAnswerIndex: 0
   {
     id: 5,
     questionText:
-      'Who voices the main character Blu in the 2011 animated film &quot;Rio&quot;?',
-    options: [
-      'Michael Cera',
-      'Jonah Hill',
-      'Jesse Eisenberg',
-      'Zach Galifianakis'],
-    correctAnswerIndex: 3
+
+      "Who voices the main character Blu in the 2011 animated film &quot;Rio&quot;?",
+      options: [
+        "Michael Cera",
+        "Jonah Hill",
+        "Jesse Eisenberg",
+        "Zach Galifianakis"],
+    correctAnswerIndex: 2
   }
 ];
 
