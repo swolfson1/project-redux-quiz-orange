@@ -4,6 +4,7 @@ import './Summary.css'
 import { useSelector } from 'react-redux'
 
 
+
 export const Summary = () => {
   const allAnswers = useSelector((state) => state.quiz.answers)
   console.log(allAnswers)
@@ -13,13 +14,17 @@ export const Summary = () => {
   return (
     <>
       {allAnswers.map((answer) => (
-        <div>
-          <h2>{answer.question.questionText}</h2>
-          <h2>{answer.question.options[answer.question.correctAnswerIndex]}</h2>
-          <h4>{answer.isCorrect ? 'correct' : 'incorrect'}</h4>
-        </div>
+        <div className="summaryContainer">
+            <h2>{answer.question.questionText}</h2>
+            
+              
+              <div className="resultContainer">
+                <h2 className="userAnswer">Your answer was: {answer.question.options[answer.question.correctAnswerIndex]}</h2>
+                <span><h2>And it was: {answer.isCorrect ? 'correct' : 'incorrect'}</h2></span>
+                </div>
+              </div>
       ))}
-      <h2>Your score is: {amountCorrect.length}/5</h2>
+      <div className="scoreContainer">Your score is: {amountCorrect.length}/5</div>
     </>
   )
 
