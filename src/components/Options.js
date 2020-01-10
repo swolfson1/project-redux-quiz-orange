@@ -19,7 +19,7 @@ export const Options = () => {
   }
 
   const classChecker = (index) => {
-    console.log("answerIndex= ", answerIndex)
+    console.log("answerIndex=", answerIndex)
     if (!hasAnswered) {
       return ''
     }
