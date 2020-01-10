@@ -53,9 +53,6 @@ export const CurrentQuestion = () => {
         });
         console.log(qListTransformed);
         dispatch(quiz.actions.updateQuestionsFromAPI(qListTransformed))
-
-        
-
       });
   }, []);
 
