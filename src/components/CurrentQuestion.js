@@ -5,9 +5,9 @@ import './CurrentQuestion.css';
 import { quiz } from 'reducers/quiz'
 
 /** API related variables, if any are used on the index page, then these should be put in the store.  */
-const NUMBEROFQUESTIONS = 10;
+const NUMBEROFQUESTIONS = 5;
 const DIFFICULTY = "easy"; /** easy, medium, difficult */
-const URL = `https://opentdb.com/api.php?amount=${NUMBEROFQUESTIONS}&difficulty=${DIFFICULTY}&type=multiple`;
+const URL = `https://opentdb.com/api.php?amount=${NUMBEROFQUESTIONS}&difficulty=${DIFFICULTY}&type=multiple&encode=url3986`;
 const USEAPI = true;
 
 /* Adds the answer into the array on a random place */
@@ -20,11 +20,16 @@ const shuffleArray = (wronganswers, answer) => {
   };
 };
 
+/** Unescape options to reformat strongs to correct format. E.g. %20 becomes a space, ;quot% becomes a " */
+const unescapeOptionsStrings = (options) => {
+  return options.map(option => unescape(option))
+}
+
 export const CurrentQuestion = () => {
   const question = useSelector((state) => state.quiz.questions[state.quiz.currentQuesionIndex])
   const dispatch = useDispatch()
 
-  let questions = useSelector((state) => state.quiz.questions) /************** FIX QUESTION ARRAY HERE! */
+  let questions = useSelector((state) => state.quiz.questions)
   console.log(questions)
   
   useEffect(() => {
@@ -43,11 +48,10 @@ export const CurrentQuestion = () => {
           /** Transform each item from the API to conform with our quiz format */
           idCounter++; /** Sets the ID for the question incrementally */
           const shuffledAnswersArray = shuffleArray(q.incorrect_answers, q.correct_answer); /** Inserts the correct answer at a random place, and returns array with (1) all alternatives and (2) the index with the correct answer */
-          
           return {
             id: idCounter,
-            questionText: q.question,
-            options: shuffledAnswersArray.options,
+            questionText: unescape(q.question),
+            options: unescapeOptionsStrings(shuffledAnswersArray.options),
             correctAnswerIndex: shuffledAnswersArray.correctAnswerIndex
           };
         });
@@ -64,7 +68,7 @@ export const CurrentQuestion = () => {
     <div className="container">
       <div className="question">
         <h1>Question:</h1>
-        <h2>{question.questionText}</h2>
+        <h2>{unescape(question.questionText)}</h2>
       </div>
      <Answers/>
     </div>
