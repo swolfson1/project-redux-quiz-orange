@@ -61,7 +61,6 @@ export const CurrentQuestion = () => {
   }
 
   return (
-
     <div className="container">
       <div className="question">
         <h1>Question:</h1>
