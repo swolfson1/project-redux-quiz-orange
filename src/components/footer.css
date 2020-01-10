@@ -1,0 +1,33 @@
+.footer-container {
+  height: 200px;
+  background-color: #f4cc70;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 800px;
+}
+
+.counter-next {
+  display: flex;
+  align-items: center;
+}
+
+.timer h1 {
+  font-size: 16px;
+}
+
+.containerCounter {
+  height: 20px;
+  font-weight: 600;
+}
+
+.nextBtn {
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 18px;
+  padding: 10px;
+  margin-left: 26px;
+  width: 90px;
+  font-weight: 600;
+}

@@ -9,7 +9,7 @@ export default function Timer() {
   }, 1000);
 
   return (
-    <div className="App">
+    <div className="timer">
       <h1>Elapsed: {elapsedSeconds}</h1>
       {elapsedSeconds < 20 && <h1>Time left: {20 - elapsedSeconds}</h1>}
       {elapsedSeconds > 20 && <h1>Time's up!!!</h1>}
