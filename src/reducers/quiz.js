@@ -29,13 +29,13 @@ const questions = [
   {
     id: 3,
     questionText:
-    
+
       "Who plays Alice in the Resident Evil movies?",
-      options: [
-        "Madison Derpe",
-        "Milla Jovovich",
-        "Milla Johnson",
-        "Kim Demp"],
+    options: [
+      "Madison Derpe",
+      "Milla Jovovich",
+      "Milla Johnson",
+      "Kim Demp"],
     correctAnswerIndex: 1
   },
   {
@@ -43,23 +43,23 @@ const questions = [
     questionText:
 
       "Who is the main protagonist in, the 1985 film, Back to the Future?",
-      options: [
-        "Marty McFly",
-        "Emmett &quot;Doc&quot; Brown",
-        "Biff Tannen",
-        "George McFly"],
+    options: [
+      "Marty McFly",
+      "Emmett &quot;Doc&quot; Brown",
+      "Biff Tannen",
+      "George McFly"],
     correctAnswerIndex: 0
-      },
+  },
   {
     id: 5,
     questionText:
 
       "Who voices the main character Blu in the 2011 animated film &quot;Rio&quot;?",
-      options: [
-        "Michael Cera",
-        "Jonah Hill",
-        "Jesse Eisenberg",
-        "Zach Galifianakis"],
+    options: [
+      "Michael Cera",
+      "Jonah Hill",
+      "Jesse Eisenberg",
+      "Zach Galifianakis"],
     correctAnswerIndex: 2
   }
 ];
