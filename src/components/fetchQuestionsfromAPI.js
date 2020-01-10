@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux'
 import { quiz } from 'reducers/quiz'
 
 /** API related variables, if any are used on the index page, then these should be put in the store.  */
-const NUMBEROFQUESTIONS = 3;
+const NUMBEROFQUESTIONS = 6;
 const DIFFICULTY = "easy"; /** easy, medium, difficult */
 const URL = `https://opentdb.com/api.php?amount=${NUMBEROFQUESTIONS}&difficulty=${DIFFICULTY}&type=multiple&encode=url3986`;
 
