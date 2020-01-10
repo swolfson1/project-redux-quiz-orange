@@ -5,6 +5,8 @@ import { quiz } from 'reducers/quiz'
 import { CurrentQuestion } from 'components/CurrentQuestion'
 import { Footer } from 'components/footer.js'
 import { Summary } from 'components/Summary'
+import { useSelector } from 'react-redux'
+
 const reducer = combineReducers({
   quiz: quiz.reducer
 })
@@ -12,19 +14,22 @@ const reducer = combineReducers({
 const store = configureStore({ reducer })
 
 export const App = () => {
+  //const questions = useSelector((state) => state.quiz.questions)
 
   return (
-    <Provider className="container" store={store}>
+    <div className="app-container">
+      <Provider store={store}>
 
 
-      <div className="header">
-        <h1>Quiz Name</h1>
-      </div>
-      <CurrentQuestion />
-      <Footer />
-      <Summary />
+        <div className="header">
+          <h1>Quiz Name</h1>
+        </div>
+        <CurrentQuestion />
+        <Footer />
+        <Summary />
 
-    </Provider>
+      </Provider>
+    </div >
 
   )
 }

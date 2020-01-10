@@ -8,10 +8,12 @@ import Timer from './timer'
 
 export const Footer = () => {
   return (
-    <div className="container">
-      <NextButton />
-      <Counter />
+    <div className="footer-container">
       <Timer />
+      <div className="counter-next">
+        <Counter />
+        <NextButton />
+      </div>
     </div>
 
   )
