@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { quiz } from 'reducers/quiz'
 
@@ -9,6 +9,12 @@ export const Options = () => {
 
   const [hasAnswered, setHasAnswered] = useState(false)
   const [answerIndex, setAnswerIndex] = useState(99)
+
+  /** Reset hasAnswered and setAnswerIndex for each question */
+  useEffect(() => {
+    setHasAnswered(false)
+    setAnswerIndex(99)
+  },[question])
 
   const handleButtonPress = (index) => {
     setHasAnswered(true)
