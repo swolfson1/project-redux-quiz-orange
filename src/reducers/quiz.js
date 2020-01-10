@@ -25,7 +25,6 @@ const questions = [
       "Speed 2: Cruise Control",
       "Son of the Mask"],
     correctAnswerIndex: 0
-
   },
   {
     id: 3,
@@ -50,6 +49,7 @@ const questions = [
         "Biff Tannen",
         "George McFly"],
     correctAnswerIndex: 0
+      },
   {
     id: 5,
     questionText:
@@ -128,6 +128,12 @@ export const quiz = createSlice({
       } else {
         state.currentQuesionIndex += 1;
       }
+    },
+
+    /** Update questions array with API  */
+    updateQuestionsFromAPI: (state, qList) => {
+      state.questions = qList.payload
+      console.log(state.questions)
     },
 
     /**
