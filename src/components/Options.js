@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { quiz } from 'reducers/quiz'
+import 'components/options.css'
+
 
 export const Options = () => {
 
@@ -39,21 +41,19 @@ export const Options = () => {
     }
   }
 
-  return (
-    <>
+    return(  
+    <div className="option-container"> 
       {question.options.map((option, index) => {
+          
+          return (
+        <button key={index}
+        className={classChecker(index)}
 
-        return (
-          <button key={index}
-            className={classChecker(index)}
-
-            type="button"
-            onClick={() => handleButtonPress(index)}>
-            {option}
-          </button>
-        )
-      })}
-    </>
-
-  )
-}
+         type="button" 
+         onClick={() => handleButtonPress(index)}>
+        {option}</button>
+      )})}
+    </div> 
+  
+    )
+  }
