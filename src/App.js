@@ -22,7 +22,6 @@ export const App = () => {
       </div>
       <CurrentQuestion />
       <Footer />
-
       <Summary />
 
     </Provider>

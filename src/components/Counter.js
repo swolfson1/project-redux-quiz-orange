@@ -15,7 +15,7 @@ export const Counter = () => {
 
   return (
     <div className="containerCounter">
-      {questionsLeft}/5
+      {questionsLeft}/{amountOfQuestions}
     </div>
 
   )
