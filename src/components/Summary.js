@@ -15,16 +15,16 @@ export const Summary = () => {
     <>
       {allAnswers.map((answer) => (
         <div className="summaryContainer">
-            <h2>{answer.question.questionText}</h2>
-            
-              
-              <div className="resultContainer">
-                <h2 className="userAnswer">Your answer was: {answer.question.options[answer.question.correctAnswerIndex]}</h2>
-                <span><h2>And it was: {answer.isCorrect ? 'correct' : 'incorrect'}</h2></span>
-                </div>
-              </div>
+          <h2>{answer.question.questionText}</h2>
+
+
+          <div className="resultContainer">
+            <h2 className="userAnswer">Your answer was: {answer.question.options[answer.question.correctAnswerIndex]}</h2>
+            <span><h2>And it was: {answer.isCorrect ? 'correct' : 'incorrect'}</h2></span>
+          </div>
+        </div>
       ))}
-      <div className="scoreContainer">Your score is: {amountCorrect.length}/5</div>
+      <div className="scoreContainer">Your score is: {amountCorrect.length}/{allAnswers.length}</div>
     </>
   )
 
