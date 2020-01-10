@@ -15,20 +15,8 @@ export const App = () => {
   //const questions = useSelector((state) => state.quiz.questions)
 
   return (
-
-    <div className="app-container">
-      <Provider store={store}>
-
-
-        <div className="header">
-          <h1>Quiz Name</h1>
-        </div>
-        <CurrentQuestion />
-        <Footer />
-        <Summary />
-
-      </Provider>
-    </div >
-
+    <Provider store={store}>
+      <Quiz />
+    </Provider>
   )
 }

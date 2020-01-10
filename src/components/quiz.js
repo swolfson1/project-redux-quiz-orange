@@ -9,7 +9,7 @@ export const Quiz = () => {
   const quizOver = useSelector((state) => state.quiz.quizOver)
 
   return(  
-  <> 
+  <div className="app-container">
     <div className="header">
       <h1>Quiz Name</h1>
     </div>
@@ -17,8 +17,7 @@ export const Quiz = () => {
     {!quizOver && <Footer />}
     
     {quizOver && <Summary />}
-    
-</>
+  </div>
   
   )
 }
