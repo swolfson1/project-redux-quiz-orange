@@ -10,9 +10,10 @@ export const Options = () => {
   const [hasAnswered, setHasAnswered] = useState(false)
   const [answerIndex, setAnswerIndex] = useState(99)
 
-  /** Reset hasAnswered for each question */
+  /** Reset hasAnswered and setAnswerIndex for each question */
   useEffect(() => {
     setHasAnswered(false)
+    setAnswerIndex(99)
   },[question])
 
   const handleButtonPress = (index) => {
