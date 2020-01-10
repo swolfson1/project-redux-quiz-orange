@@ -1,0 +1,31 @@
+
+.summaryContainer {
+    background-color: #6AB187;
+    font-family: Roboto;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+   
+}
+h2 {
+    display:flex;
+    justify-content: center; 
+}
+
+span {
+    background-color: #F4CC70
+}
+
+
+.resultContainer {
+    background-color: #DE7a22;
+    display:flex;
+    justify-content: space-around;
+}
+.scoreContainer {
+    background-color: #F4CC70;
+    display:flex;
+    justify-content: center;
+   
+}
+

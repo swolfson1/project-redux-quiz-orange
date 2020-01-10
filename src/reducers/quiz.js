@@ -1,12 +1,13 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 // Change these to your own questions!
 const questions = [
   {
     id: 1,
     questionText:
-      "Which movie includes a giant bunny-like spirit who has magic powers including growing trees?",
+      'Which movie includes a giant bunny-like spirit who has magic powers including growing trees?',
     options: [
+
       "Hop",
       "Rise of the Guardians",
       "Alice in Wonderland",
@@ -16,8 +17,9 @@ const questions = [
   {
     id: 2,
     questionText:
-      "Which movie sequel had improved box office results compared to its original film?",
+      'Which movie sequel had improved box office results compared to its original film?',
     options: [
+
       "Toy Story 2",
       "Sin City: A Dame to Kill For",
       "Speed 2: Cruise Control",
@@ -27,34 +29,37 @@ const questions = [
   {
     id: 3,
     questionText:
+
       "Who plays Alice in the Resident Evil movies?",
-      options: [
-        "Madison Derpe",
-        "Milla Jovovich",
-        "Milla Johnson",
-        "Kim Demp"],
+    options: [
+      "Madison Derpe",
+      "Milla Jovovich",
+      "Milla Johnson",
+      "Kim Demp"],
     correctAnswerIndex: 1
   },
   {
     id: 4,
     questionText:
+
       "Who is the main protagonist in, the 1985 film, Back to the Future?",
-      options: [
-        "Marty McFly",
-        "Emmett &quot;Doc&quot; Brown",
-        "Biff Tannen",
-        "George McFly"],
+    options: [
+      "Marty McFly",
+      "Emmett &quot;Doc&quot; Brown",
+      "Biff Tannen",
+      "George McFly"],
     correctAnswerIndex: 0
   },
   {
     id: 5,
     questionText:
+
       "Who voices the main character Blu in the 2011 animated film &quot;Rio&quot;?",
-      options: [
-        "Michael Cera",
-        "Jonah Hill",
-        "Jesse Eisenberg",
-        "Zach Galifianakis"],
+    options: [
+      "Michael Cera",
+      "Jonah Hill",
+      "Jesse Eisenberg",
+      "Zach Galifianakis"],
     correctAnswerIndex: 2
   }
 ];
@@ -67,7 +72,7 @@ const initialState = {
 };
 
 export const quiz = createSlice({
-  name: "quiz",
+  name: 'quiz',
   initialState,
   reducers: {
     /**
@@ -87,11 +92,11 @@ export const quiz = createSlice({
      */
     submitAnswer: (state, action) => {
       const { questionId, answerIndex } = action.payload;
-      const question = state.questions.find(q => q.id === questionId);
+      const question = state.questions.find((q) => q.id === questionId);
 
       if (!question) {
         throw new Error(
-          "Could not find question! Check to make sure you are passing the question id correctly."
+          'Could not find question! Check to make sure you are passing the question id correctly.'
         );
       }
 
@@ -117,12 +122,18 @@ export const quiz = createSlice({
      *
      * This action does not require a payload.
      */
-    goToNextQuestion: state => {
+    goToNextQuestion: (state) => {
       if (state.currentQuesionIndex + 1 === state.questions.length) {
         state.quizOver = true;
       } else {
         state.currentQuesionIndex += 1;
       }
+    },
+
+    /** Update questions array with API  */
+    updateQuestionsFromAPI: (state, qList) => {
+      state.questions = qList.payload
+      console.log(state.questions)
     },
 
     /**
