@@ -8,16 +8,16 @@ import { Summary } from 'components/Summary'
 export const Quiz = () => {
   const quizOver = useSelector((state) => state.quiz.quizOver)
 
-  return(  
-  <div className="app-container">
-    <div className="header">
-      <h1>Quiz Name</h1>
+  return (
+    <div className="app-container">
+      <div className="header">
+        <h1>Quiz</h1>
+      </div>
+      {!quizOver && <CurrentQuestion />}
+      {!quizOver && <Footer />}
+
+      {quizOver && <Summary />}
     </div>
-    {!quizOver && <CurrentQuestion />}
-    {!quizOver && <Footer />}
-    
-    {quizOver && <Summary />}
-  </div>
-  
+
   )
 }
